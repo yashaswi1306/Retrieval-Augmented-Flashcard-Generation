@@ -1,1 +1,2 @@
-# Retrieval-Augmented-Flashcard-Generation
+# Retrieval-Augmented-Flashcard-Generation:
+RAG Study Assistant
