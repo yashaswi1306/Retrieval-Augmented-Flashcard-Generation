@@ -37,14 +37,22 @@ Then, it uses these parts as context for a large language model, to generate fla
 <br>
 
 ## Usage:
-<br>
+
 ```
 git clone <repo url>
 ```
-```python -m venv .venv```
-```source .venv/bin/activate```
-```pip install -r requirements.txt```
-```streamlit run streamlit_pipeline.py```
+```
+python -m venv .venv
+```
+```
+source .venv/bin/activate
+```
+```
+pip install -r requirements.txt
+```
+```
+streamlit run streamlit_pipeline.py
+```
 
 <br>
 <br>
