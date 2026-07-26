@@ -38,6 +38,7 @@ Then, it uses these parts as context for a large language model, to generate fla
 
 ## Usage:
 
+
 ```
 git clone <repo url>
 ```
@@ -55,7 +56,7 @@ streamlit run streamlit_pipeline.py
 ```
 
 <br>
-<br>
+
 
 ## Pipeline:
 
