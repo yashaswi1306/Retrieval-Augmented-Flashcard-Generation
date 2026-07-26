@@ -10,7 +10,6 @@ Then, it uses these parts as context for a large language model, to generate fla
 
 ## Project Features:
 
-<br>
 
 -> Upload the PDF file of a textbook or reading materials.<br>
 -> Select range of page numbers.<br>
