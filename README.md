@@ -80,5 +80,36 @@ flashcard_generator.py
 flashcard_processing.py
 ```
 
+<br>
 
+## Process
 
+### Phase 1:
+Medical_Text_Extraction.ipynb:<br>
+Made in google colab so there was gpu access thus less processing time.
+<br>
+Used for a specific reference doc (ICMR_Dataset.pdf).
+<br>
+Notebook makes it easire to spot WHERE a code breaks and leads a more structured approach to the problem.
+<br>
+
+### Phase 2:
+Python files for each subtask:<br>
+Easy to extrapolate these from the ipynb.
+<br>
+A test file used alonside each subtask in the pipeline to prevent errors from flowing downstream, culminating in test_generator.py
+<br>
+
+### Phase 3:
+terminal_pipeline.py:<br>
+Checks if pipeline works properly in terminal to simplify testing without the UI hassel
+<br>
+
+### Phase 3:
+streamlit_pipeline.py:<br>
+Final pipeline using streamlit.
+<br>
+As this was my first time using streamlit a bunch of refernce docs were used ('streamlit_reference_links/reference_doc.md')
+<br>
+test_streamlit.py used for debugging
+<br>
