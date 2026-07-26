@@ -6,6 +6,7 @@ Then, it uses these parts as context for a large language model, to generate fla
 
 ## Project Features:
 
+```
 -> Upload the PDF file of a textbook or reading materials.
 -> Select range of page numbers.
 -> Extract text from pdf via PyMuPDF.
@@ -16,4 +17,5 @@ Then, it uses these parts as context for a large language model, to generate fla
 -> Semantic Search for text related to chosen topic using FAISS for context.
 -> Transformers library to get local HuggingFace Model : 'Qwen/Qwen2.5-3B-Instruct'
 -> Flashcard Processing to seperate Questions and Answers inorder to make a drop-down menu for flashcards.
+```
 
