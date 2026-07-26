@@ -3,7 +3,7 @@
 
 
 The project processes an uploaded pdf to generate flashcards for last minute revision.
-<br><br> 
+<br>
 It retrieves the necessary parts in the pdf using semantic search (FAISS) relative to the revision topic.<br><br>
 Then, it uses these parts as context for a large language model, to generate flashcards.  
 <br>
