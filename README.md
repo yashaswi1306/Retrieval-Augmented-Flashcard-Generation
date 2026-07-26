@@ -14,9 +14,12 @@ Then, it uses these parts as context for a large language model, to generate fla
 ```
 Upload the PDF file of a textbook or reading materials.
 
+
 Select range of page numbers.
 
+
 Extract text from pdf via PyMuPDF.
+
 
 Text pre-processing and chunking.
 
