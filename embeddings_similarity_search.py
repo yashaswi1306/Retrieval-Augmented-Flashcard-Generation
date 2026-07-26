@@ -26,13 +26,9 @@ def faiss_indexing(w_embed,path=None):
 
     index.add(w_embed.astype('float32'))
 
-    # faiss.write_index(index,path)
 
     return index
 
-def load_index(path):
-
-    return faiss.read_index(path)
 
 def similarity_search(query,model,index,chunks,k=5):
 
