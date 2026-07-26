@@ -38,7 +38,9 @@ Then, it uses these parts as context for a large language model, to generate fla
 
 ## Usage:
 <br>
-```git clone <repo url>```
+```
+git clone <repo url>
+```
 ```python -m venv .venv```
 ```source .venv/bin/activate```
 ```pip install -r requirements.txt```
