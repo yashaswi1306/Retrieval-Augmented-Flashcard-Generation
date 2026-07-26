@@ -20,4 +20,12 @@ https://docs.streamlit.io/develop/api-reference/text/st.badge
 https://docs.streamlit.io/develop/api-reference/widgets/st.slider
 
 FUN STUFF: https://www.youtube.com/watch?v=_Um12_OlGgw
+
+https://discuss.streamlit.io/t/colored-text/34892/5
+https://docs.streamlit.io/develop/api-reference/layout/st.expander
+
+FLASHCARDS: https://discuss.streamlit.io/t/colored-boxes-around-sections-of-a-sentence/3201
+Better one : https://discuss.streamlit.io/t/display-text-inside-text-box-of-a-particular-color/19788/2
+
+THEME: https://docs.streamlit.io/develop/api-reference/configuration/config.toml
 '''
