@@ -16,7 +16,7 @@ Then, it uses these parts as context for a large language model, to generate fla
 -> Select range of page numbers.<br>
 -> Extract text from pdf via PyMuPDF.<br>
 -> Text pre-processing and chunking.<br>
--> SentenceTransformers used for HuggingFace Model : 'BAAI/bge-base-en-v1.5' for generating word embeddings.<br>
+-> HuggingFace Model : 'BAAI/bge-base-en-v1.5' for generating word embeddings via SentenceTransformers.<br>
 -> Enter topic for Revision.<br>
 -> Select number of flashcards you want to generate and the word limit per answer.<br>
 -> Semantic Search for text related to chosen topic using FAISS for context.<br>
