@@ -22,3 +22,14 @@ res=get_results(query,embed_model,index,chunk_list,5)
 
 print(len(res))
 print(res)
+
+context="\n".join(res)
+print(len(context))
+print(context)
+
+from flashcard_generator import *
+
+tokenizer,llm=get_llm()
+res=generate_flashcards(tokenizer,llm,context)
+
+print(res)
