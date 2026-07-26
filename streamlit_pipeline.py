@@ -1,21 +1,27 @@
 from pdf_text_extraction import *
 from embeddings_similarity_search import *
 from flashcard_generator import *
+from flashcard_processing import *
 
 import streamlit as st
 
 st.set_page_config(page_title='Flashcard Generator', layout='wide')
 
 st.title('AI Study Assistant for Flashcard Generation', text_alignment='center')
-st.subheader("It's Revision Time!")
+st.subheader("It's Revision Time!", text_alignment='center')
 
 if 'time_to_kassi' not in st.session_state:
     st.session_state['time_to_kassi']=0
 
-pdf_doc=st.file_uploader('Upload PDF Doc:',type='pdf')
+col1,col2,col3=st.columns(3,vertical_alignment='center')
 
-start=st.number_input("Start Page Number", value=0,min_value=0)
-end=st.number_input("End Page Number (-1 for Default):", value=-1,min_value=-1)
+with col1:
+    pdf_doc=st.file_uploader('Upload PDF Doc:',type='pdf')
+with col2:
+    start=st.number_input("Start Page Number", value=0,min_value=0)
+
+with col3:
+    end=st.number_input("End Page Number (-1 for Default):", value=-1,min_value=-1)
 
 if (st.button("Read PDF")):
 
@@ -47,10 +53,14 @@ if (st.button("Read PDF")):
 
 if st.session_state['time_to_kassi']:
 
-    query=st.text_input("Enter Revision Topic:")
+    col1,col2,col3=st.columns(3,vertical_alignment='center')
 
-    k=st.slider('Enter number of flashcards to generate:', min_value=1, max_value=10, step=1)
-    max_words=st.number_input('Enter preferred answer word length: (Enter -1 for default)', value=-1, min_value=-1)
+    with col1:
+        query=st.text_input("Enter Revision Topic:")
+    with col2:
+        k=st.slider('Enter number of flashcards to generate:', min_value=1, max_value=10, step=1)
+    with col3:
+        max_words=st.number_input('Enter preferred answer word length: (Enter -1 for default)', value=-1, min_value=-1)
 
     if st.button("Generate Flashcards"):
 
@@ -64,4 +74,20 @@ if st.session_state['time_to_kassi']:
                 res=generate_flashcards(st.session_state['tokenizer'], st.session_state['llm'],context,num_cards=k,max_words=max_words)
 
         st.header("Here are your flashcards. All the Best!")
-        st.text(res)
+
+        flashcards=flashcard_gen(res)
+
+
+        for card in flashcards:
+            
+            with st.expander(f"Question: {card['Question']}"):
+                st.markdown(f"""
+<div style=
+"background-color: #a9dfeb;
+border-radius: 10px;
+padding: 10px 15px;"
+>
+Answer:
+{card['Answer']}
+</div>""",unsafe_allow_html=True)
+
