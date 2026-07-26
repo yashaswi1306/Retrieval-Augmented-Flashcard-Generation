@@ -36,6 +36,9 @@ def main():
     print('FAISS Indexing...')
     index=faiss_indexing(w_embed)
 
+    print('Loading Model...')
+    tokenizer,llm=get_llm()
+
     ## Query loop
 
     while True:
@@ -50,8 +53,6 @@ def main():
         res=get_results(query,embed_model,index,chunk_list,k)
         context="\n".join(res)
 
-        print('Loading Model...')
-        tokenizer,llm=get_llm()
 
         print('Generating Flashcards...')
         if(max_words==-1):
