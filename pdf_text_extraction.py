@@ -1,9 +1,9 @@
 import pandas as pd
 import fitz
 
-def text_extraction_from_pdf(pdf_path,start_page=0,end_page=-1):
+def text_extraction_from_pdf(pdf,start_page=0,end_page=-1):
 
-    pdf_doc=fitz.open(pdf_path)
+    pdf_doc=fitz.open(stream=pdf.read(),filetype='pdf')
 
     if(end_page==-1):
         end_page=len(pdf_doc)
