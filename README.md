@@ -7,19 +7,16 @@ The project processes an uploaded pdf to generate flashcards for last minute rev
 It retrieves the necessary parts in the pdf using semantic search (FAISS) relative to the revision topic.<br><br>
 Then, it uses these parts as context for a large language model, to generate flashcards.  
 <br>
-<br>
+
 
 ## Project Features:
 
 ```
 Upload the PDF file of a textbook or reading materials.
 
-
 Select range of page numbers.
 
-
 Extract text from pdf via PyMuPDF.
-
 
 Text pre-processing and chunking.
 
@@ -39,12 +36,18 @@ Flashcard Processing to seperate Questions and Answers inorder to make a drop-do
 
 ## Python Libraries Used:
 
--> Streamlit <br>
--> FAISS <br>
--> SentenceTransformers <br>
--> PyMuPDF<br>
--> Transformers <br>
--> Regex 
+```
+Streamlit
+
+FAISS
+
+SentenceTransformers
+
+PyMuPD
+
+Transformers
+
+Regex
 <br>
 <br>
 
@@ -85,7 +88,8 @@ flashcard_processing.py
 ## Process
 
 ### Phase 1:
-Medical_Text_Extraction.ipynb:<br>
+
+#### Medical_Text_Extraction.ipynb:<br>
 Made in google colab so there was gpu access thus less processing time.
 <br>
 Used for a specific reference doc (ICMR_Dataset.pdf).
@@ -94,19 +98,20 @@ Notebook makes it easire to spot WHERE a code breaks and leads a more structured
 <br>
 
 ### Phase 2:
-Python files for each subtask:<br>
+
+#### Python files for each subtask:<br>
 Easy to extrapolate these from the ipynb.
 <br>
 A test file used alonside each subtask in the pipeline to prevent errors from flowing downstream, culminating in test_generator.py
 <br>
 
 ### Phase 3:
-terminal_pipeline.py:<br>
+#### Create terminal_pipeline.py:<br>
 Checks if pipeline works properly in terminal to simplify testing without the UI hassel
 <br>
 
-### Phase 3:
-streamlit_pipeline.py:<br>
+### Phase 4:
+#### Create streamlit_pipeline.py:<br>
 Final pipeline using streamlit.
 <br>
 As this was my first time using streamlit a bunch of refernce docs were used ('streamlit_reference_links/reference_doc.md')
